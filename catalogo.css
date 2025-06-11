@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 40px 0;
+}
+
+.auto {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.auto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.auto h2 {
+    margin: 15px 0 10px 0;
+    font-size: 1.2em;
+}
+
+.auto p {
+    color: #555;
+    font-size: 0.98em;
+}
+
+
+body {
+    background: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.car-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.car-img {
+    transition: transform 0.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.car-img:hover {
+    transform: scale(1.08);
+    z-index: 2;
+}
+
+.modal-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.catalog-title {
+    text-shadow: 2px 2px 8px #000;
+}
