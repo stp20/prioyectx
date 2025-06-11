@@ -1,6 +1,7 @@
 /* Fondo animado con gradiente */
 body {
-  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  background: url('catalogo/5399714.jpg') no-repeat center center fixed;
+  background-size: cover;
   animation: gradientBG 10s ease-in-out infinite alternate;
 }
 
@@ -42,6 +43,7 @@ footer {
   box-shadow: 0 2px 8px rgba(67, 206, 162, 0.15);
   transition: background 0.3s, transform 0.2s;
 }
+
 .button-innovador:hover {
   background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
   transform: translateY(-3px) scale(1.04);
@@ -54,12 +56,14 @@ footer {
   border-radius: 0.5rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
+
 .car-details {
   background: #f8f9fa;
   border-radius: 0.5rem;
   padding: 2rem;
   margin-top: 2rem;
 }
+
 footer {
   background: #212529;
   color: #fff;
@@ -71,14 +75,17 @@ html,
 body {
   height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .container.my-5 {
   flex: 1 0 auto;
 }
+
 footer {
   flex-shrink: 0;
 }
