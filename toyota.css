@@ -1,0 +1,35 @@
+.car-img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.car-details {
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+footer {
+  background: #212529;
+  color: #fff;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container.my-5 {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+}

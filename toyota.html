@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toyota Corolla - Detalles del Vehículo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="mustang.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Toyota Corolla</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Vehículo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img id="carImage" src="img/toyota.webp" 
+                         alt="Toyota Corolla" class="car-img mb-3" onclick="changeImage()" />
+                <div class="small text-muted">Haz clic en la imagen para ver otro perfil</div>
+            </div>
+            <div class="col-md-6">
+                <div class="car-details shadow-sm">
+                    <h2>Toyota Corolla 2024</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Motor:</strong> 2.0L I4</li>
+                        <li class="list-group-item"><strong>Potencia:</strong> 169 HP</li>
+                        <li class="list-group-item"><strong>Transmisión:</strong> CVT</li>
+                        <li class="list-group-item"><strong>0-100 km/h:</strong> 4.2 segundos</li>
+                        <li class="list-group-item"><strong>Tracción:</strong> Delantera</li>
+                        <li class="list-group-item"><strong>Color:</strong> Rojo Racing</li>
+                        <li class="list-group-item"><strong>Precio:</strong> $65,000 USD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center ">
+            <p class="mb-0">&copy; 2024 Toyota Corolla. Todos los derechos reservados.</p>
+            <small>Diseñado por tu equipo profesional.</small>
+        </div>
+    </footer>
+
+    <script>
+        // Imágenes de diferentes perfiles del auto
+        const images = [
+            "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=800&q=80", // Frontal
+            "https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=800&q=80", // Lateral
+            "https://images.unsplash.com/photo-1462392246754-28dfa2df8e6b?auto=format&fit=crop&w=800&q=80", // Trasera
+            "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"  // Interior
+        ];
+        let current = 0;
+        function changeImage() {
+            current = (current + 1) % images.length;
+            document.getElementById('carImage').src = images[current];
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
