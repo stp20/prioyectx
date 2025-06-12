@@ -1,0 +1,88 @@
+/* Estilos mejorados para el carrito */
+.carrito-container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 24px 32px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.carrito-titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2d3748;
+  text-align: center;
+}
+
+.carrito-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.carrito-item:last-child {
+  border-bottom: none;
+}
+
+.carrito-nombre {
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+.carrito-precio {
+  font-weight: bold;
+  color: #3182ce;
+}
+
+.carrito-eliminar {
+  background: #e53e3e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 12px;
+}
+
+.carrito-eliminar:hover {
+  background: #c53030;
+}
+
+.carrito-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 16px;
+  color: #2b6cb0;
+}
+
+.carrito-boton-comprar {
+  display: block;
+  width: 100%;
+  background: #38a169;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background 0.2s;
+}
+
+.carrito-boton-comprar:hover {
+  background: #2f855a;
+}

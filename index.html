@@ -4,32 +4,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- aqui se hace llamado a la hoja de estilos -->
   <title>Tienda</title>
 </head>
 
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">AutoStore</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+  <!-- Esta parte del codigo es la barra de navegacion de la tienda -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+        <i class="bi bi-car-front-fill me-2 fs-3"></i>AutoStore
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Inicio</a>
+            <a class="nav-link active" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="catalogo.html"><i class="bi bi-grid me-1"></i>Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ofertas.html"><i class="bi bi-tag me-1"></i>Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto"><i class="bi bi-envelope me-1"></i>Contacto</a>
+          </li>
         </ul>
+        <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+          <a href="carritocomp.html" class="btn btn-outline-light position-relative" aria-label="Carrito de compras">
+            <i class="bi bi-cart3 fs-4"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.75em;display:none;" id="cart-count">0</span>
+          </a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+
+  <!-- Este codigo representa el titulo de pagina y el llamado a la accion principal -->
   <section class="bg-body-secondary py-5 text-center">
     <div class="container">
       <h1 class="display-4 fw-bold hero-animate">Encuentra el auto de tus sueños</h1>
@@ -40,7 +57,7 @@
     </div>
   </section>
 
-  <!-- Featured Cars -->
+  <!-- En esta parte del codigo se alojan los autos destacados de la tienda -->
   <div class="container my-5">
     <h2 class="mb-4 text-center fw-bold">Autos Destacados</h2>
     <div class="row g-4">
@@ -53,7 +70,7 @@
               Eficiencia, tecnología y confort en un solo vehículo.
             </p>
             <span class="badge bg-success mb-2">Nuevo</span>
-            <p class="fw-bold">$22,000 USD</p>
+            <p class="fw-bold">$22.000.000 CLP</p>
             <a href="toyota.html" class="btn btn-outline-primary w-100">Ver detalles</a>
           </div>
         </div>
@@ -67,7 +84,7 @@
               Clásico e icónico para los amantes de la velocidad.
             </p>
             <span class="badge bg-danger mb-2">Oferta</span>
-            <p class="fw-bold">$35,000 USD</p>
+            <p class="fw-bold">$35.000.000 CLP</p>
             <a href="mustanggt.html" class="btn btn-outline-primary w-100">Ver detalles</a>
           </div>
         </div>
@@ -81,7 +98,7 @@
               Espacio, seguridad y tecnología para toda la familia.
             </p>
             <span class="badge bg-warning text-dark mb-2">Seminuevo</span>
-            <p class="fw-bold">$28,500 USD</p>
+            <p class="fw-bold">$28.500.000 CLP</p>
             <a href="honda.html" class="btn btn-outline-primary w-100">Ver detalles</a>
           </div>
         </div>
@@ -89,7 +106,7 @@
     </div>
   </div>
 
-  <!-- About Section -->
+  <!-- Esta parte del codigo representa los beneficios de elegir AutoStore y publicidad -->
   <section class="bg-secondary text-white py-5">
     <div class="container">
       <div class="row align-items-center">
@@ -122,6 +139,7 @@
     </div>
   </section>
 
+  <!-- Esta parte del codigo presenta imagenes del equipo y nuestra mision como empresa -->
   <div class="container my-5">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-6">
@@ -161,7 +179,7 @@
     </div>
   </div>
 
-  <!-- Contact Form -->
+  <!-- formulario de contacto para clientes que desean cotizar con los ejecutivos -->
   <div class="container my-5 bg-body-secondary p-5 rounded shadow">
     <h2 class="text-center mb-4 fw-bold">Contáctanos</h2>
     <div class="row justify-content-center">
@@ -185,7 +203,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- este es el pie de la pagina web el cual contiene enlaces a redes sociales y un menu -->
 
   <footer class="bg-dark text-white text-center py-3">
     <div class="container">
@@ -217,11 +235,13 @@
     </div>
   </footer>
 
-  <!-- Bootstrap 5 JS and Icons -->
+  <!-- Iconos de redes sociales importados de bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<!-- Esta es una funcion scroll que al hacerle click al boton de contacto la pagina se posiciona en el lugar del formulario -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const contactoLink = document.querySelector('a[href="#contacto"]');
@@ -234,5 +254,16 @@
     }
   });
 </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cartCount = 0;
+      const badge = document.getElementById("cart-count");
+      if (cartCount > 0) {
+        badge.textContent = cartCount;
+        badge.style.display = "inline-block";
+      }
+    });
+  </script>
 
 </html>
