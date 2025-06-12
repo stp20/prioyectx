@@ -66,7 +66,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
-
 <!-- Carrito JS -->
 <script>
     // Obtener carrito desde localStorage
@@ -128,6 +127,50 @@
 
     // Inicializar carrito
     document.addEventListener('DOMContentLoaded', renderCart);
+</script>
+
+
+<script>
+    function renderCartSummary() {
+        const cart = getCart();
+        let count = 0;
+        let subtotal = 0;
+        cart.forEach(item => {
+            count += item.quantity;
+            subtotal += item.price * item.quantity;
+        });
+        document.getElementById('cart-count').textContent = count;
+        document.getElementById('cart-subtotal').textContent = subtotal.toLocaleString();
+    }
+    // Llama también al render del resumen cuando se actualiza el carrito
+    function renderCart() {
+        const cart = getCart();
+        const cartBody = document.getElementById('cart-body');
+        const cartTotal = document.getElementById('cart-total');
+        cartBody.innerHTML = '';
+        let total = 0;
+        cart.forEach((item, idx) => {
+            const subtotal = item.price * item.quantity;
+            total += subtotal;
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>$${item.price.toLocaleString()}</td>
+                        <td>
+                            <input type="number" min="1" value="${item.quantity}" class="form-control form-control-sm quantity-input" data-idx="${idx}">
+                        </td>
+                        <td>$${subtotal.toLocaleString()}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm remove-btn" data-idx="${idx}">&times;</button>
+                        </td>
+                    `;
+            cartBody.appendChild(row);
+        });
+        cartTotal.textContent = total.toLocaleString();
+        renderCartSummary();
+    }
+    // Inicializar resumen al cargar
+    document.addEventListener('DOMContentLoaded', renderCartSummary);
 </script>
 
 </html>

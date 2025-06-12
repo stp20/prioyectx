@@ -38,7 +38,8 @@
         <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
           <a href="carritocomp.html" class="btn btn-outline-light position-relative" aria-label="Carrito de compras">
             <i class="bi bi-cart3 fs-4"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.75em;display:none;" id="cart-count">0</span>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              style="font-size:0.75em;" id="cart-count">0</span>
           </a>
         </div>
       </div>
@@ -255,15 +256,15 @@
   });
 </script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const cartCount = 0;
-      const badge = document.getElementById("cart-count");
-      if (cartCount > 0) {
-        badge.textContent = cartCount;
-        badge.style.display = "inline-block";
-      }
-    });
-  </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cartCount = 0;
+    const badge = document.getElementById("cart-count");
+    if (cartCount > 0) {
+      badge.textContent = cartCount;
+      badge.style.display = "inline-block";
+    }
+  });
+</script>
 
 </html>
