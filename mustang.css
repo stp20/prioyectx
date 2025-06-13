@@ -23,11 +23,28 @@ body {
 
 
 footer {
-  background: linear-gradient(90deg, #212529 60%, #43cea2 100%);
-  color: #fff;
-  letter-spacing: 1px;
-  font-weight: 500;
-  box-shadow: 0 -2px 16px rgba(67, 206, 162, 0.15);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+footer a {
+    color: #ffd600;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #fff176;
+    text-decoration: underline;
 }
 
 

@@ -32,9 +32,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="ofertas.html"><i class="bi bi-tag me-1"></i>Ofertas</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto"><i class="bi bi-envelope me-1"></i>Contacto</a>
-                    </li>
                 </ul>
                 <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
                     <a href="carritocomp.html" class="btn btn-outline-light position-relative"
@@ -51,11 +48,11 @@
     <h1>Catálogo de Autos en Oferta</h1>
     <div class="catalogo">
         <div class="auto">
-            <img src="catalogo/toyotasupra.avif"
+            <img src="img/toyota.webp"
                 alt="Auto 1">
-            <h2>Toyota Supra</h2>
-            <p>Sedán compacto, motor eficiente, ideal para ciudad. 25,000 km, único dueño.</p>
-            <div class="oferta">Oferta: $15.000.000 CLP</div>
+            <h2>Toyota Corolla 2023</h2>
+            <p>Eficiencia, tecnología y confort en un solo vehículo.</p>
+            <div class="oferta">Oferta: $22.000.000 CLP</div>
         </div>
         <div class="auto">
             <img src="catalogo/Audi r8.jpg"
@@ -93,31 +90,48 @@
             <div class="oferta">Oferta: $79.900.000 CLP</div>
         </div>
         <div class="auto">
-            <img src="catalogo/tesla.jpeg"
+            <img src="img/Honda.webp"
                 alt="Auto 7">
-            <h2>Tesla Model S</h2>
-            <p>Eléctrico, alto rendimiento, tecnología de conducción autónoma. 5,000 km.</p>
-            <div class="oferta">Oferta: $89.900.000 CLP</div>
+            <h2>Honda CR-V 2022</h2>
+            <p>Espacio, seguridad y tecnología para toda la familia.</p>
+            <div class="oferta">Oferta: $28.500.000 CLP</div>
         </div>
 
     </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <div class="container">
-            <small>&copy; 2024 AutoStore. Todos los derechos reservados.</small>
-            <nav class="mt-3">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item"><a href="index.html"
-                            class="text-white text-decoration-underline">Inicio</a></li>
-                    <li class="list-inline-item"><a href="catalogo.html"
-                            class="text-white text-decoration-underline">Catálogo</a>
-                    </li>
-                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-underline">Ofertas</a>
-                    </li>
-                </ul>
-            </nav>
+  <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <small>&copy; 2024 AutoStore. Todos los derechos reservados.</small>
         </div>
-    </footer>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <a href="https://facebook.com" target="_blank" class="text-white me-3" aria-label="Facebook">
+            <i class="bi bi-facebook fs-4"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="text-white me-3" aria-label="Instagram">
+            <i class="bi bi-instagram fs-4"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="text-white me-3" aria-label="Twitter">
+            <i class="bi bi-twitter fs-4"></i>
+          </a>
+          <a href="https://wa.me/" target="_blank" class="text-white" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp fs-4"></i>
+          </a>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <nav>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-underline">Inicio</a></li>
+              <li class="list-inline-item"><a href="catalogo.html" class="text-white text-decoration-underline">Catálogo</a></li>
+              <li class="list-inline-item"><a href="ofertas.html" class="text-white text-decoration-underline">Ofertas</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
 </body>
 
 
@@ -127,13 +141,13 @@
 <script>
     // Car data for adding to cart (coincide con los autos en oferta)
     const cars = [
-        { id: 1, name: "Toyota Supra", price: 15500000 },
+        { id: 1, name: "Toyota Corolla 2023", price: 22000000 },
         { id: 2, name: "Audi R8", price: 16800000 },
         { id: 3, name: "Ford Mustang 2019", price: 25900000 },
         { id: 4, name: "Chevrolet Camaro", price: 13200000 },
         { id: 5, name: "Mercedes-Benz Clase C", price: 17500000 },
         { id: 6, name: "Porsche 911", price: 79900000 },
-        { id: 7, name: "Tesla Model S", price: 89900000 }
+        { id: 7, name: "Honda CR-V 2022", price: 28500000 }
     ];
 
     // Load cart from localStorage

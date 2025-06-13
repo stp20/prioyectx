@@ -8,22 +8,32 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <!-- NAVBAR (igual que index.html) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <!-- Esta parte del codigo es la barra de navegacion de la tienda -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Mi Tienda</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <i class="bi bi-car-front-fill me-2 fs-3"></i>AutoStore
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="carrito.html">Carrito</a></li>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="bi bi-house-door me-1"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html"><i class="bi bi-grid me-1"></i>Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ofertas.html"><i class="bi bi-tag me-1"></i>Ofertas</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,11 +63,165 @@
             <a href="https://webpay.cl" class="btn btn-success btn-lg" id="pay-btn" target="_blank">Pagar</a>
         </div>
     </div>
+    <div class="container my-4">
+        <h3>Resumen del Carrito</h3>
+        <div class="card">
+            <div class="card-body">
+                <p class="mb-1">Total de productos: <span id="cart-count">0</span></p>
+                <p class="mb-1">Subtotal: $<span id="cart-subtotal">0</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="container my-4">
+        <div class="accordion" id="infoAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPago">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsePago" aria-expanded="true" aria-controls="collapsePago">
+                        Instrucciones de Pago
+                    </button>
+                </h2>
+                <div id="collapsePago" class="accordion-collapse collapse" aria-labelledby="headingPago"
+                    data-bs-parent="#infoAccordion">
+                    <div class="accordion-body">
+                        <p>Para completar tu compra, por favor sigue estos pasos:</p>
+                        <ol>
+                            <li>Haz clic en el botón "Pagar" para ser redirigido a la plataforma de pago.</li>
+                            <li>Ingresa tus datos de pago y confirma la transacción.</li>
+                            <li>Una vez completado el pago, recibirás un correo de confirmación.</li>
+                        </ol>
+                        <p>Si tienes alguna duda, contáctanos a través de nuestro correo electrónico o número de
+                            teléfono.</p>
+                        <p>¡Gracias por tu compra!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDevoluciones">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseDevoluciones" aria-expanded="false"
+                        aria-controls="collapseDevoluciones">
+                        Política de Devoluciones
+                    </button>
+                </h2>
+                <div id="collapseDevoluciones" class="accordion-collapse collapse" aria-labelledby="headingDevoluciones"
+                    data-bs-parent="#infoAccordion">
+                    <div class="accordion-body">
+                        <p>Si no estás satisfecho con tu compra, puedes devolver el producto dentro de los 30 días
+                            siguientes a la compra. Asegúrate de que el producto esté en su estado original y con el
+                            embalaje intacto.</p>
+                        <p>Para iniciar una devolución, contáctanos a través de nuestro correo electrónico o número de
+                            teléfono.</p>
+                        <p>Recuerda que los productos en oferta o rebajados no son elegibles para devolución, a menos
+                            que estén defectuosos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingContacto">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseContacto" aria-expanded="false" aria-controls="collapseContacto">
+                        Contacto
+                    </button>
+                </h2>
+                <div id="collapseContacto" class="accordion-collapse collapse" aria-labelledby="headingContacto"
+                    data-bs-parent="#infoAccordion">
+                    <div class="accordion-body">
+                        <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos:</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Email:</strong>
+                                <a href="mailto:info@autostore.com">info@autostore.com</a>
+                            </li>
+                            <li><strong>Teléfono:</strong> +56 9 1234 5678</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRedes">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseRedes" aria-expanded="false" aria-controls="collapseRedes">
+                        Redes Sociales
+                    </button>
+                </h2>
+                <div id="collapseRedes" class="accordion-collapse collapse" aria-labelledby="headingRedes"
+                    data-bs-parent="#infoAccordion">
+                    <div class="accordion-body">
+                        <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y ofertas:
+                        </p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/autostore" target="_blank"
+                                    class="text-decoration-none">Facebook</a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/autostore" target="_blank"
+                                    class="text-decoration-none">Instagram</a></li>
+                            <li class="list-inline-item"><a href="https://www.twitter.com/autostore" target="_blank"
+                                    class="text-decoration-none">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFAQ">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseFAQ">
+                        Preguntas Frecuentes
+                    </button>
+                </h2>
+                <div id="collapseFAQ" class="accordion-collapse collapse" aria-labelledby="headingFAQ"
+                    data-bs-parent="#infoAccordion">
+                    <div class="accordion-body">
+                        <p><strong>¿Cómo puedo agregar productos al carrito?</strong></p>
+                        <p>Para agregar productos, navega por nuestro catálogo y haz clic en el botón "Agregar al
+                            carrito" en el producto deseado.</p>
+                        <p><strong>¿Cómo puedo ver mi carrito de compras?</strong></p>
+                        <p>Haz clic en el icono del carrito en la parte superior derecha de la página para ver los
+                            productos que has agregado.</p>
+                        <p><strong>¿Puedo modificar la cantidad de un producto en el carrito?</strong></p>
+                        <p>Sí, puedes cambiar la cantidad directamente desde el carrito. Simplemente ajusta el número y
+                            se actualizará automáticamente.</p>
+                        <p><strong>¿Qué métodos de pago aceptan?</strong></p>
+                        <p>Aceptamos tarjetas de crédito, débito y transferencias bancarias. Todos los pagos son seguros
+                            y se procesan a través de plataformas confiables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- FOOTER (igual que index.html) -->
-    <footer class="bg-dark text-white text-center py-3 mt-auto w-100 position-fixed bottom-0 start-0">
+
+    <footer class="bg-dark text-white pt-4 pb-3 mt-5">
         <div class="container">
-            <p class="mb-0">&copy; 2024 Mi Tienda. Todos los derechos reservados.</p>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <small>&copy; 2024 AutoStore. Todos los derechos reservados.</small>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <a href="https://facebook.com" target="_blank" class="text-white me-3" aria-label="Facebook">
+                        <i class="bi bi-facebook fs-4"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="text-white me-3" aria-label="Instagram">
+                        <i class="bi bi-instagram fs-4"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-white me-3" aria-label="Twitter">
+                        <i class="bi bi-twitter fs-4"></i>
+                    </a>
+                    <a href="https://wa.me/" target="_blank" class="text-white" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp fs-4"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <nav>
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><a href="index.html"
+                                    class="text-white text-decoration-underline">Inicio</a></li>
+                            <li class="list-inline-item"><a href="catalogo.html"
+                                    class="text-white text-decoration-underline">Catálogo</a></li>
+                            <li class="list-inline-item"><a href="ofertas.html"
+                                    class="text-white text-decoration-underline">Ofertas</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </footer>
 
