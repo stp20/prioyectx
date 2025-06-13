@@ -99,12 +99,12 @@
         </div>
     </div>
     <div class="container my-4">
-        <div class="accordion" id="infoAccordion">
-            <div class="accordion-item">
+        <div class="accordion shadow-lg rounded-4 overflow-hidden" id="infoAccordion">
+            <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingPago">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button bg-success bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapsePago" aria-expanded="true" aria-controls="collapsePago">
-                        Instrucciones de Pago
+                        <i class="bi bi-credit-card me-2 text-success"></i> Instrucciones de Pago
                     </button>
                 </h2>
                 <div id="collapsePago" class="accordion-collapse collapse" aria-labelledby="headingPago"
@@ -112,102 +112,116 @@
                     <div class="accordion-body">
                         <p>Para completar tu compra, por favor sigue estos pasos:</p>
                         <ol>
-                            <li>Haz clic en el botón "Pagar" para ser redirigido a la plataforma de pago.</li>
+                            <li>Haz clic en el botón <span class="badge bg-success">Pagar</span> para ser redirigido a la plataforma de pago.</li>
                             <li>Ingresa tus datos de pago y confirma la transacción.</li>
                             <li>Una vez completado el pago, recibirás un correo de confirmación.</li>
                         </ol>
-                        <p>Si tienes alguna duda, contáctanos a través de nuestro correo electrónico o número de
-                            teléfono.</p>
-                        <p>¡Gracias por tu compra!</p>
+                        <div class="alert alert-info mt-3 mb-0 p-2">
+                            Si tienes alguna duda, contáctanos a través de nuestro correo electrónico o número de teléfono.
+                        </div>
+                        <p class="mt-2 text-success fw-bold">¡Gracias por tu compra!</p>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingDevoluciones">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed bg-warning bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseDevoluciones" aria-expanded="false"
                         aria-controls="collapseDevoluciones">
-                        Política de Devoluciones
+                        <i class="bi bi-arrow-counterclockwise me-2 text-warning"></i> Política de Devoluciones
                     </button>
                 </h2>
                 <div id="collapseDevoluciones" class="accordion-collapse collapse" aria-labelledby="headingDevoluciones"
                     data-bs-parent="#infoAccordion">
                     <div class="accordion-body">
-                        <p>Si no estás satisfecho con tu compra, puedes devolver el producto dentro de los 30 días
-                            siguientes a la compra. Asegúrate de que el producto esté en su estado original y con el
-                            embalaje intacto.</p>
-                        <p>Para iniciar una devolución, contáctanos a través de nuestro correo electrónico o número de
-                            teléfono.</p>
-                        <p>Recuerda que los productos en oferta o rebajados no son elegibles para devolución, a menos
-                            que estén defectuosos.</p>
+                        <p>Si no estás satisfecho con tu compra, puedes devolver el producto dentro de los <strong>30 días</strong> siguientes a la compra. Asegúrate de que el producto esté en su estado original y con el embalaje intacto.</p>
+                        <div class="alert alert-warning p-2 mb-2">
+                            Los productos en oferta o rebajados no son elegibles para devolución, a menos que estén defectuosos.
+                        </div>
+                        <p>Para iniciar una devolución, contáctanos a través de nuestro correo electrónico o número de teléfono.</p>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingContacto">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed bg-primary bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseContacto" aria-expanded="false" aria-controls="collapseContacto">
-                        Contacto
+                        <i class="bi bi-envelope-at me-2 text-primary"></i> Contacto
                     </button>
                 </h2>
                 <div id="collapseContacto" class="accordion-collapse collapse" aria-labelledby="headingContacto"
                     data-bs-parent="#infoAccordion">
                     <div class="accordion-body">
                         <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos:</p>
-                        <ul class="list-unstyled">
-                            <li><strong>Email:</strong>
-                                <a href="mailto:info@autostore.com">info@autostore.com</a>
+                        <ul class="list-unstyled mb-2">
+                            <li class="mb-1"><i class="bi bi-envelope me-1 text-primary"></i>
+                                <strong>Email:</strong>
+                                <a href="mailto:info@autostore.com" class="text-decoration-underline">info@autostore.com</a>
                             </li>
-                            <li><strong>Teléfono:</strong> +56 9 1234 5678</li>
+                            <li><i class="bi bi-telephone me-1 text-primary"></i>
+                                <strong>Teléfono:</strong> +56 9 1234 5678
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingRedes">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed bg-info bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseRedes" aria-expanded="false" aria-controls="collapseRedes">
-                        Redes Sociales
+                        <i class="bi bi-share me-2 text-info"></i> Redes Sociales
                     </button>
                 </h2>
                 <div id="collapseRedes" class="accordion-collapse collapse" aria-labelledby="headingRedes"
                     data-bs-parent="#infoAccordion">
                     <div class="accordion-body">
-                        <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y ofertas:
-                        </p>
-                        <ul class="list-inline">
-                            <li class="list-inline-item"><a href="https://www.facebook.com/autostore" target="_blank"
-                                    class="text-decoration-none">Facebook</a></li>
-                            <li class="list-inline-item"><a href="https://www.instagram.com/autostore" target="_blank"
-                                    class="text-decoration-none">Instagram</a></li>
-                            <li class="list-inline-item"><a href="https://www.twitter.com/autostore" target="_blank"
-                                    class="text-decoration-none">Twitter</a></li>
+                        <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y ofertas:</p>
+                        <ul class="list-inline fs-5 mb-0">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/autostore" target="_blank" class="text-decoration-none text-primary">
+                                    <i class="bi bi-facebook"></i> Facebook
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/autostore" target="_blank" class="text-decoration-none text-danger">
+                                    <i class="bi bi-instagram"></i> Instagram
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.twitter.com/autostore" target="_blank" class="text-decoration-none text-info">
+                                    <i class="bi bi-twitter"></i> Twitter
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingFAQ">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button collapsed bg-light fw-semibold" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseFAQ">
-                        Preguntas Frecuentes
+                        <i class="bi bi-question-circle me-2 text-secondary"></i> Preguntas Frecuentes
                     </button>
                 </h2>
                 <div id="collapseFAQ" class="accordion-collapse collapse" aria-labelledby="headingFAQ"
                     data-bs-parent="#infoAccordion">
                     <div class="accordion-body">
-                        <p><strong>¿Cómo puedo agregar productos al carrito?</strong></p>
-                        <p>Para agregar productos, navega por nuestro catálogo y haz clic en el botón "Agregar al
-                            carrito" en el producto deseado.</p>
-                        <p><strong>¿Cómo puedo ver mi carrito de compras?</strong></p>
-                        <p>Haz clic en el icono del carrito en la parte superior derecha de la página para ver los
-                            productos que has agregado.</p>
-                        <p><strong>¿Puedo modificar la cantidad de un producto en el carrito?</strong></p>
-                        <p>Sí, puedes cambiar la cantidad directamente desde el carrito. Simplemente ajusta el número y
-                            se actualizará automáticamente.</p>
-                        <p><strong>¿Qué métodos de pago aceptan?</strong></p>
-                        <p>Aceptamos tarjetas de crédito, débito y transferencias bancarias. Todos los pagos son seguros
-                            y se procesan a través de plataformas confiables.</p>
+                        <div class="mb-2">
+                            <p class="mb-1 fw-bold"><i class="bi bi-cart-plus me-1 text-success"></i> ¿Cómo puedo agregar productos al carrito?</p>
+                            <p class="mb-2">Navega por nuestro catálogo y haz clic en el botón <span class="badge bg-success">Agregar al carrito</span> en el producto deseado.</p>
+                        </div>
+                        <div class="mb-2">
+                            <p class="mb-1 fw-bold"><i class="bi bi-bag-check me-1 text-primary"></i> ¿Cómo puedo ver mi carrito de compras?</p>
+                            <p class="mb-2">Haz clic en el icono del carrito en la parte superior derecha de la página para ver los productos que has agregado.</p>
+                        </div>
+                        <div class="mb-2">
+                            <p class="mb-1 fw-bold"><i class="bi bi-pencil-square me-1 text-warning"></i> ¿Puedo modificar la cantidad de un producto en el carrito?</p>
+                            <p class="mb-2">Sí, puedes cambiar la cantidad directamente desde el carrito. Simplemente ajusta el número y se actualizará automáticamente.</p>
+                        </div>
+                        <div>
+                            <p class="mb-1 fw-bold"><i class="bi bi-credit-card-2-front me-1 text-info"></i> ¿Qué métodos de pago aceptan?</p>
+                            <p>Aceptamos tarjetas de crédito, débito y transferencias bancarias. Todos los pagos son seguros y se procesan a través de plataformas confiables.</p>
+                        </div>
                     </div>
                 </div>
             </div>
