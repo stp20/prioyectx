@@ -34,18 +34,18 @@
                     </li>
                 </ul>
                 <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
-                    <a href="carritocomp.html" class="btn btn-outline-light position-relative"
-                        aria-label="Carrito de compras">
+                    <a href="carritocomp.html" class="btn btn-outline-light p-1 d-flex align-items-center justify-content-center position-relative"
+                        style="width: 48px; height: 48px; border-radius: 8px;" aria-label="Carrito de compras">
                         <i class="bi bi-cart3 fs-4"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                            style="font-size:0.75em;" id="cart-count">0</span>
+                            style="font-size:0.8em; min-width:22px; height:22px; padding:0;" id="cart-count">0</span>
                     </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <h1>Catálogo de Autos en Oferta</h1>
+    <h1>Catálogo de Autos en Ofe</div>rta</h1>
     <div class="catalogo">
         <div class="auto">
             <img src="img/toyota.webp"
@@ -79,7 +79,7 @@
             <img src="catalogo/Mercedes.webp"
                 alt="Auto 5">
             <h2>Mercedes-Benz Clase C</h2>
-            <p>Elegante, amplio espacio interior, sistema de seguridad avanzado. 22,000 km.</p>
+            <p>Amplio espacio interior, sistema de seguridad avanzado. 22,000 km.</p>
             <div class="oferta">Oferta: $17.500.000 CLP</div>
         </div>
         <div class="auto">
@@ -125,6 +125,7 @@
               <li class="list-inline-item"><a href="index.html" class="text-white text-decoration-underline">Inicio</a></li>
               <li class="list-inline-item"><a href="catalogo.html" class="text-white text-decoration-underline">Catálogo</a></li>
               <li class="list-inline-item"><a href="ofertas.html" class="text-white text-decoration-underline">Ofertas</a></li>
+
             </ul>
           </nav>
         </div>
@@ -144,11 +145,32 @@
         { id: 1, name: "Toyota Corolla 2023", price: 22000000 },
         { id: 2, name: "Audi R8", price: 16800000 },
         { id: 3, name: "Ford Mustang 2019", price: 25900000 },
-        { id: 4, name: "Chevrolet Camaro", price: 13200000 },
+        { id: 4, name: "Chevrolet camaro", price: 13200000 },
         { id: 5, name: "Mercedes-Benz Clase C", price: 17500000 },
         { id: 6, name: "Porsche 911", price: 79900000 },
         { id: 7, name: "Honda CR-V 2022", price: 28500000 }
     ];
+
+    // Show a Bootstrap alert message
+    function showAlert(message, type = "warning") {
+        const oldAlert = document.getElementById('custom-alert');
+        if (oldAlert) oldAlert.remove();
+
+        const alertDiv = document.createElement('div');
+        alertDiv.id = 'custom-alert';
+        alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 shadow`;
+        alertDiv.style.zIndex = 2000;
+        alertDiv.style.minWidth = '300px';
+        alertDiv.innerHTML = `
+            <strong><i class="bi bi-exclamation-triangle me-2"></i></strong> ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        `;
+        document.body.appendChild(alertDiv);
+
+        setTimeout(() => {
+            if (alertDiv) alertDiv.classList.remove('show');
+        }, 2500);
+    }
 
     // Load cart from localStorage
     function loadCart() {
@@ -162,12 +184,13 @@
         const car = cars.find(c => c.id === carId);
         const exists = cart.find(item => item.id === carId);
         if (exists) {
-            alert('Vehículo ya agregado');
+            showAlert('¡Ya agregaste este vehículo al carrito! Solo puedes añadir uno de cada modelo.', 'info');
             return;
         }
         cart.push({ id: car.id, name: car.name, price: car.price, qty: 1 });
         localStorage.setItem('cart', JSON.stringify(cart));
         loadCart();
+        showAlert('Vehículo agregado al carrito exitosamente.', 'success');
     }
 
     // Attach add to cart buttons after DOM loaded

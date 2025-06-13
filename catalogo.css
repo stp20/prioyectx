@@ -125,7 +125,9 @@ body {
 }
 
 .auto img,
+
 .car-img,
+
 .modal-img {
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -157,6 +159,7 @@ footer a:hover {
 }
 
 
+
 .btn {
     background: linear-gradient(90deg, #a6dce7 0%, #c7c6db 100%);
     color: #fff;
@@ -165,7 +168,7 @@ footer a:hover {
     padding: 0.75rem 2rem;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(76,99,255,0.10);
+    box-shadow: 0 2px 8px rgba(76, 99, 255, 0.10);
     transition: background 0.3s, transform 0.2s;
 }
 

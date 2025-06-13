@@ -60,8 +60,34 @@
         </div>
         <div class="d-flex justify-content-end align-items-center">
             <h4 class="me-3">Total: $<span id="cart-total">0</span></h4>
-            <a href="https://webpay.cl" class="btn btn-success btn-lg" id="pay-btn" target="_blank">Pagar</a>
+            <div class="dropdown">
+                <button class="btn btn-success btn-lg dropdown-toggle" type="button" id="payDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Pagar
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="payDropdown">
+                    <li><a class="dropdown-item pay-link" href="https://www.bancofalabella.cl/" target="_blank">Banco
+                            Falabella</a></li>
+                    <li><a class="dropdown-item pay-link" href="https://www.forus.cl/" target="_blank">Forus</a></li>
+                    <li><a class="dropdown-item pay-link" href="https://webpay.cl" target="_blank">Webpay</a></li>
+                </ul>
+            </div>
         </div>
+
+        <!-- Notificación: Carrito vacío -->
+        <div id="cart-alert" class="alert alert-warning alert-dismissible fade" role="alert"
+            style="position: fixed; top: 80px; right: 20px; z-index: 1055;">
+            <strong>¡Atención!</strong> No hay ningún producto agregado al carrito.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+        <!-- Notificación: Cantidad no agregada -->
+        <div id="cart-qty-alert" class="alert alert-warning alert-dismissible fade" role="alert"
+            style="position: fixed; top: 130px; right: 20px; z-index: 1055;">
+            <strong>¡Atención!</strong> No ha agregado cantidad de producto.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+
+
     </div>
     <div class="container my-4">
         <h3>Resumen del Carrito</h3>
@@ -335,6 +361,55 @@
     }
     // Inicializar resumen al cargar
     document.addEventListener('DOMContentLoaded', renderCartSummary);
+</script>
+
+<script>
+    // Oculta la alerta al inicio
+    document.getElementById('cart-alert').classList.remove('show');
+    document.querySelectorAll('.pay-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (!cart.length) {
+                e.preventDefault();
+                const alertDiv = document.getElementById('cart-alert');
+                alertDiv.classList.add('show');
+                // Oculta automáticamente después de 4 segundos
+                setTimeout(() => {
+                    alertDiv.classList.remove('show');
+                }, 4000);
+            }
+        });
+    });
+</script>
+
+<script>
+    // Función para mostrar alertas
+    function showAlert(id) {
+        const alertDiv = document.getElementById(id);
+        alertDiv.classList.add('show');
+        setTimeout(() => {
+            alertDiv.classList.remove('show');
+        }, 4000);
+    }
+
+    // Validación al intentar pagar
+    document.querySelectorAll('.pay-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (!cart.length) {
+                e.preventDefault();
+                showAlert('cart-alert');
+                return;
+            }
+            // Verifica si algún producto tiene cantidad inválida (vacía, 0 o menor a 1)
+            let invalidQty = cart.some(item => !item.quantity || isNaN(item.quantity) || item.quantity < 1);
+            if (invalidQty) {
+                e.preventDefault();
+                showAlert('cart-qty-alert');
+                return;
+            }
+        });
+    });
 </script>
 
 </html>
