@@ -453,4 +453,49 @@
     });
 </script>
 
+<script>
+    // Limitar la cantidad máxima a 10 en los inputs del carrito
+    document.addEventListener('input', function (e) {
+        if (e.target.classList.contains('quantity-input')) {
+            let value = parseInt(e.target.value);
+            if (value > 10) {
+                e.target.value = 10;
+                value = 10;
+            }
+            const idx = e.target.getAttribute('data-idx');
+            let cart = getCart();
+            cart[idx].quantity = Math.max(1, value);
+            saveCart(cart);
+            renderCart();
+        }
+    });
+
+    // Al renderizar el carrito, asegúrate de que el input tenga max=10
+    function renderCart() {
+        const cart = getCart();
+        const cartBody = document.getElementById('cart-body');
+        const cartTotal = document.getElementById('cart-total');
+        cartBody.innerHTML = '';
+        let total = 0;
+        cart.forEach((item, idx) => {
+            const subtotal = item.price * item.quantity;
+            total += subtotal;
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>$${item.price.toLocaleString()}</td>
+                <td>
+                    <input type="number" min="1" max="10" value="${item.quantity}" class="form-control form-control-sm quantity-input" data-idx="${idx}">
+                </td>
+                <td>$${subtotal.toLocaleString()}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm remove-btn" data-idx="${idx}">&times;</button>
+                </td>
+            `;
+            cartBody.appendChild(row);
+        });
+        cartTotal.textContent = total.toLocaleString();
+        if (typeof renderCartSummary === 'function') renderCartSummary();
+    }
+</script>
 </html>
