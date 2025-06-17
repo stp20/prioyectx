@@ -6,7 +6,10 @@ body {
   padding: 0;
 }   /* Estilos del fondo de la pagina */
 
-
+body {
+  background: url('img/fondocord.avif') no-repeat center center fixed;
+  background-size: cover;
+}
 
 .carrito-container {
   max-width: 420px;
