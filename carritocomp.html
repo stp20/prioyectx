@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <title>Carrito de Compras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
+    <!---------------------------------------------------- Bootstrap CSS ---------------------------------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!---------------------------------------------------- Estilos Personalizados ---------------------------------------------------->
     <link rel="stylesheet" href="carrito.css">
+    <!---------------------------------------------------- Fuentes de Iconos ---------------------------------------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body>
 
-    <!-- Esta parte del codigo es la barra de navegacion de la tienda -->
+    <!------------------------- Esta parte del codigo es la barra de navegacion de la tienda ------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
@@ -39,7 +41,12 @@
         </div>
     </nav>
 
-    <!-- Carrito de Compras -->
+    <!--------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+    <!--------------------------------------------------- Carrito de Compras ---------------------------------------------------->
     <div class="container my-5">
         <h2 class="mb-4">Carrito de Compras</h2>
         <div class="table-responsive">
@@ -50,7 +57,7 @@
                         <th>Precio</th>
                         <th>Cantidad</th>
                         <th>Subtotal</th>
-                        <th>Eliminar</th>
+                        <th>Eliminar</th> <!-- Informacion detalle de compra -->
                     </tr>
                 </thead>
                 <tbody id="cart-body">
@@ -58,6 +65,9 @@
                 </tbody>
             </table>
         </div>
+
+        <!---------------------------------------------------- Botón de Pagar ---------------------------------------------------->
+
         <div class="d-flex justify-content-end align-items-center">
             <h4 class="me-3">Total: $<span id="cart-total">0</span></h4>
             <div class="dropdown">
@@ -74,7 +84,15 @@
             </div>
         </div>
 
-        <!-- Notificación: Carrito vacío -->
+        <!---------------------------------------------------- Botón de Continuar Comprando y Vaciar Carrito ---------------------------------------------------->        <div class="mt-3">
+            <a href="catalogo.html" class="btn btn-secondary"><i class="bi bi-arrow-left me-1"></i> Seguir Comprando</a>
+            <button id="clear-cart" class="btn btn-danger"><i class="bi bi-trash me-1"></i> Vaciar Carrito</button>
+        </div>
+        <!--------------------------------------------------------------------------------------------------------------------------->
+
+
+
+        <!---------------------------------------------------- notificacion carrito vacio ---------------------------------------------------->
         <div id="cart-alert" class="alert alert-warning alert-dismissible fade" role="alert"
             style="position: fixed; top: 80px; right: 20px; z-index: 1055;">
             <strong>¡Atención!</strong> No hay ningún producto agregado al carrito.
@@ -87,50 +105,57 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
         </div>
 
+        <!--------------------------------------------------------------------------------------------------------------------------->
 
     </div>
-    
 
-    <!-- Métodos de Pago con Imágenes -->
+
+    <!---------------------------------------------------- Muestra de metodos de pago ---------------------------------------------------->
     <div class="container my-5">
         <h3 class="mb-3 text-center">Métodos de Pago Disponibles</h3>
         <div class="row justify-content-center g-4">
             <div class="col-6 col-md-3 text-center">
-                    <div class="card border-0 shadow-sm h-100">
-                        <img src="img/falabella.jpg" alt="Banco Falabella" class="card-img-top p-3" style="height:200px; object-fit:contain;">
-                        <div class="card-body">
-                            <h6 class="card-title mb-0">Banco Falabella</h6>
-                        </div>
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="img/falabella.jpg" alt="Banco Falabella" class="card-img-top p-3"
+                        style="height:200px; object-fit:contain;">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Banco Falabella</h6>
                     </div>
+                </div>
                 </a>
             </div>
             <div class="col-6 col-md-3 text-center">
-                    <div class="card border-0 shadow-sm h-100">
-                        <img src="img/forum.jpg" alt="Forum" class="card-img-top p-3" style="height:200px; object-fit:contain;">
-                        <div class="card-body">
-                            <h6 class="card-title mb-0">Forum</h6>
-                        </div>
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="img/forum.jpg" alt="Forum" class="card-img-top p-3"
+                        style="height:200px; object-fit:contain;">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Forum</h6>
                     </div>
+                </div>
                 </a>
             </div>
             <div class="col-6 col-md-3 text-center">
-                    <div class="card border-0 shadow-sm h-100">
-                        <img src="img/webpay.png" alt="Webpay" class="card-img-top p-3" style="height:200px; object-fit:contain;">
-                        <div class="card-body">
-                            <h6 class="card-title mb-0">Webpay</h6>
-                        </div>
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="img/webpay.png" alt="Webpay" class="card-img-top p-3"
+                        style="height:200px; object-fit:contain;">
+                    <div class="card-body">
+                        <h6 class="card-title mb-0">Webpay</h6>
                     </div>
+                </div>
                 </a>
             </div>
         </div>
     </div>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
+    <!---------------------------------------------------- Instrucciones de Pago ---------------------------------------------------->
     <div class="container my-4">
         <div class="accordion shadow-lg rounded-4 overflow-hidden" id="infoAccordion">
             <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingPago">
-                    <button class="accordion-button bg-success bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsePago" aria-expanded="true" aria-controls="collapsePago">
+                    <button class="accordion-button bg-success bg-opacity-10 fw-semibold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapsePago" aria-expanded="true"
+                        aria-controls="collapsePago">
                         <i class="bi bi-credit-card me-2 text-success"></i> Instrucciones de Pago
                     </button>
                 </h2>
@@ -139,21 +164,27 @@
                     <div class="accordion-body">
                         <p>Para completar tu compra, por favor sigue estos pasos:</p>
                         <ol>
-                            <li>Haz clic en el botón <span class="badge bg-success">Pagar</span> para ser redirigido a la plataforma de pago.</li>
+                            <li>Haz clic en el botón <span class="badge bg-success">Pagar</span> para ser redirigido a
+                                la plataforma de pago.</li>
                             <li>Ingresa tus datos de pago y confirma la transacción.</li>
                             <li>Una vez completado el pago, recibirás un correo de confirmación.</li>
                         </ol>
                         <div class="alert alert-info mt-3 mb-0 p-2">
-                            Si tienes alguna duda, contáctanos a través de nuestro correo electrónico o número de teléfono.
+                            Si tienes alguna duda, contáctanos a través de nuestro correo electrónico o número de
+                            teléfono.
                         </div>
                         <p class="mt-2 text-success fw-bold">¡Gracias por tu compra!</p>
                     </div>
                 </div>
             </div>
+
+            <!--------------------------------------------------------------------------------------------------------------------------->
+
+            <!---------------------------------------------------- Política de Devoluciones ---------------------------------------------------->
             <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingDevoluciones">
-                    <button class="accordion-button collapsed bg-warning bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseDevoluciones" aria-expanded="false"
+                    <button class="accordion-button collapsed bg-warning bg-opacity-10 fw-semibold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseDevoluciones" aria-expanded="false"
                         aria-controls="collapseDevoluciones">
                         <i class="bi bi-arrow-counterclockwise me-2 text-warning"></i> Política de Devoluciones
                     </button>
@@ -161,18 +192,26 @@
                 <div id="collapseDevoluciones" class="accordion-collapse collapse" aria-labelledby="headingDevoluciones"
                     data-bs-parent="#infoAccordion">
                     <div class="accordion-body">
-                        <p>Si no estás satisfecho con tu compra, puedes devolver el producto dentro de los <strong>30 días</strong> siguientes a la compra. Asegúrate de que el producto esté en su estado original y con el embalaje intacto.</p>
+                        <p>Si no estás satisfecho con tu compra, puedes devolver el producto dentro de los <strong>30
+                                días</strong> siguientes a la compra. Asegúrate de que el producto esté en su estado
+                            original y con el embalaje intacto.</p>
                         <div class="alert alert-warning p-2 mb-2">
-                            Los productos en oferta o rebajados no son elegibles para devolución, a menos que estén defectuosos.
+                            Los productos en oferta o rebajados no son elegibles para devolución, a menos que estén
+                            defectuosos.
                         </div>
-                        <p>Para iniciar una devolución, contáctanos a través de nuestro correo electrónico o número de teléfono.</p>
+                        <p>Para iniciar una devolución, contáctanos a través de nuestro correo electrónico o número de
+                            teléfono.</p>
                     </div>
                 </div>
             </div>
+            <!--------------------------------------------------------------------------------------------------------------------------->
+
+            <!---------------------------------------------------- Información de Contacto ---------------------------------------------------->
             <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingContacto">
-                    <button class="accordion-button collapsed bg-primary bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseContacto" aria-expanded="false" aria-controls="collapseContacto">
+                    <button class="accordion-button collapsed bg-primary bg-opacity-10 fw-semibold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseContacto" aria-expanded="false"
+                        aria-controls="collapseContacto">
                         <i class="bi bi-envelope-at me-2 text-primary"></i> Contacto
                     </button>
                 </h2>
@@ -183,7 +222,8 @@
                         <ul class="list-unstyled mb-2">
                             <li class="mb-1"><i class="bi bi-envelope me-1 text-primary"></i>
                                 <strong>Email:</strong>
-                                <a href="mailto:info@autostore.com" class="text-decoration-underline">info@autostore.com</a>
+                                <a href="mailto:info@autostore.com"
+                                    class="text-decoration-underline">info@autostore.com</a>
                             </li>
                             <li><i class="bi bi-telephone me-1 text-primary"></i>
                                 <strong>Teléfono:</strong> +56 9 1234 5678
@@ -192,30 +232,39 @@
                     </div>
                 </div>
             </div>
+            <!--------------------------------------------------------------------------------------------------------------------------->
+
+
+            <!---------------------------------------------------- Redes Sociales ---------------------------------------------------->
             <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingRedes">
-                    <button class="accordion-button collapsed bg-info bg-opacity-10 fw-semibold" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseRedes" aria-expanded="false" aria-controls="collapseRedes">
+                    <button class="accordion-button collapsed bg-info bg-opacity-10 fw-semibold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseRedes" aria-expanded="false"
+                        aria-controls="collapseRedes">
                         <i class="bi bi-share me-2 text-info"></i> Redes Sociales
                     </button>
                 </h2>
                 <div id="collapseRedes" class="accordion-collapse collapse" aria-labelledby="headingRedes"
                     data-bs-parent="#infoAccordion">
                     <div class="accordion-body">
-                        <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y ofertas:</p>
+                        <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y ofertas:
+                        </p>
                         <ul class="list-inline fs-5 mb-0">
                             <li class="list-inline-item">
-                                <a href="https://www.facebook.com/autostore" target="_blank" class="text-decoration-none text-primary">
+                                <a href="https://www.facebook.com/autostore" target="_blank"
+                                    class="text-decoration-none text-primary">
                                     <i class="bi bi-facebook"></i> Facebook
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.instagram.com/autostore" target="_blank" class="text-decoration-none text-danger">
+                                <a href="https://www.instagram.com/autostore" target="_blank"
+                                    class="text-decoration-none text-danger">
                                     <i class="bi bi-instagram"></i> Instagram
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://www.twitter.com/autostore" target="_blank" class="text-decoration-none text-info">
+                                <a href="https://www.twitter.com/autostore" target="_blank"
+                                    class="text-decoration-none text-info">
                                     <i class="bi bi-twitter"></i> Twitter
                                 </a>
                             </li>
@@ -223,10 +272,15 @@
                     </div>
                 </div>
             </div>
+            <!--------------------------------------------------------------------------------------------------------------------------->
+
+
+            <!---------------------------------------------------- Preguntas Frecuentes ---------------------------------------------------->
             <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingFAQ">
-                    <button class="accordion-button collapsed bg-light fw-semibold" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFAQ" aria-expanded="false" aria-controls="collapseFAQ">
+                    <button class="accordion-button collapsed bg-light fw-semibold" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseFAQ" aria-expanded="false"
+                        aria-controls="collapseFAQ">
                         <i class="bi bi-question-circle me-2 text-secondary"></i> Preguntas Frecuentes
                     </button>
                 </h2>
@@ -234,28 +288,40 @@
                     data-bs-parent="#infoAccordion">
                     <div class="accordion-body">
                         <div class="mb-2">
-                            <p class="mb-1 fw-bold"><i class="bi bi-cart-plus me-1 text-success"></i> ¿Cómo puedo agregar productos al carrito?</p>
-                            <p class="mb-2">Navega por nuestro catálogo y haz clic en el botón <span class="badge bg-success">Agregar al carrito</span> en el producto deseado.</p>
+                            <p class="mb-1 fw-bold"><i class="bi bi-cart-plus me-1 text-success"></i> ¿Cómo puedo
+                                agregar productos al carrito?</p>
+                            <p class="mb-2">Navega por nuestro catálogo y haz clic en el botón <span
+                                    class="badge bg-success">Agregar al carrito</span> en el producto deseado.</p>
                         </div>
                         <div class="mb-2">
-                            <p class="mb-1 fw-bold"><i class="bi bi-bag-check me-1 text-primary"></i> ¿Cómo puedo ver mi carrito de compras?</p>
-                            <p class="mb-2">Haz clic en el icono del carrito en la parte superior derecha de la página para ver los productos que has agregado.</p>
+                            <p class="mb-1 fw-bold"><i class="bi bi-bag-check me-1 text-primary"></i> ¿Cómo puedo ver mi
+                                carrito de compras?</p>
+                            <p class="mb-2">Haz clic en el icono del carrito en la parte superior derecha de la página
+                                para ver los productos que has agregado.</p>
                         </div>
                         <div class="mb-2">
-                            <p class="mb-1 fw-bold"><i class="bi bi-pencil-square me-1 text-warning"></i> ¿Puedo modificar la cantidad de un producto en el carrito?</p>
-                            <p class="mb-2">Sí, puedes cambiar la cantidad directamente desde el carrito. Simplemente ajusta el número y se actualizará automáticamente.</p>
+                            <p class="mb-1 fw-bold"><i class="bi bi-pencil-square me-1 text-warning"></i> ¿Puedo
+                                modificar la cantidad de un producto en el carrito?</p>
+                            <p class="mb-2">Sí, puedes cambiar la cantidad directamente desde el carrito. Simplemente
+                                ajusta el número y se actualizará automáticamente.</p>
                         </div>
                         <div>
-                            <p class="mb-1 fw-bold"><i class="bi bi-credit-card-2-front me-1 text-info"></i> ¿Qué métodos de pago aceptan?</p>
-                            <p>Aceptamos tarjetas de crédito, débito y transferencias bancarias. Todos los pagos son seguros y se procesan a través de plataformas confiables.</p>
+                            <p class="mb-1 fw-bold"><i class="bi bi-credit-card-2-front me-1 text-info"></i> ¿Qué
+                                métodos de pago aceptan?</p>
+                            <p>Aceptamos tarjetas de crédito, débito y transferencias bancarias. Todos los pagos son
+                                seguros y se procesan a través de plataformas confiables.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <!--------------------------------------------------------------------------------------------------------------------------->
+        </div> 
 
 
+    </div>  
+
+
+    <!---------------------------------------------------- Footer - pie de página ---------------------------------------------------->
     <footer class="bg-dark text-white pt-4 pb-3 mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -291,10 +357,13 @@
             </div>
         </div>
     </footer>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
-</body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body> 
+
+<!---------------------------------------------------- Scripts ---------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  <!----- Bootstrap JS ------->
 
 
 <!-- Carrito JS -->
@@ -361,7 +430,7 @@
 </script>
 
 
-<script>
+<script> // Renderizar resumen del carrito
     function renderCartSummary() {
         const cart = getCart();
         let count = 0;
@@ -373,6 +442,7 @@
         document.getElementById('cart-count').textContent = count;
         document.getElementById('cart-subtotal').textContent = subtotal.toLocaleString();
     }
+    
     // Llama también al render del resumen cuando se actualiza el carrito
     function renderCart() {
         const cart = getCart();
@@ -498,4 +568,12 @@
         if (typeof renderCartSummary === 'function') renderCartSummary();
     }
 </script>
+
+<script>// Vaciar carrito
+    document.getElementById('clear-cart').addEventListener('click', function () {
+        localStorage.removeItem('cart');
+        if (typeof renderCart === 'function') renderCart();
+    });
+</script>
+
 </html>

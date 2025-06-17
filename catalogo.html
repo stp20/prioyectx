@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Autos</title>
+    <!---------------------------------------------------- Estilos ---------------------------------------------------->
     <link rel="stylesheet" href="catalogo.css">
+    <!---------------------------------------------------- Bootstrap ---------------------------------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!---------------------------------------------------- Bootstrap Icons ---------------------------------------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <title>Catálogo de Autos</title>
 
 </head>
 
 <body>
 
-    <!-- Esta parte del codigo es la barra de navegacion de la tienda -->
+    <!---------------------------------------------------- Barra de Navegación ---------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
@@ -46,15 +49,19 @@
             </div>
         </div>
     </nav>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
+    <!---------------------------------------------------- Catálogo de Autos ---------------------------------------------------->
     <div class="container py-5">
+
         <h1 class="text-center text-white mb-5 catalog-title">Catálogo de Autos</h1>
         <div class="row g-4">
             <!-- Auto 1 -->
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="img/mustang gt.webp" alt="Ford Mustang GT" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="img/mustang gt.webp" alt="Ford Mustang GT"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal1" style="object-fit:cover; height:180px; width:100%;">
                         <span class="badge bg-danger position-absolute top-0 end-0 m-2">Nuevo</span>
                     </div>
@@ -67,7 +74,8 @@
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/camaro.webp" alt="Chevrolet Camaro SS" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/camaro.webp" alt="Chevrolet Camaro SS"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal2" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">Chevrolet Camaro SS</h5>
@@ -79,7 +87,8 @@
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/BMW.avif" alt="BMW M4 Competition" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/BMW.avif" alt="BMW M4 Competition"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal3" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">BMW M4 Competition</h5>
@@ -91,7 +100,8 @@
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/Audi r8.jpg" alt="Audi R8 V10" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/Audi r8.jpg" alt="Audi R8 V10"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal4" style="object-fit:cover; height:180px; width:100%;">
                         <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2">Destacado</span>
                     </div>
@@ -104,68 +114,79 @@
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/Porche.webp" alt="Porsche 911 Carrera" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/Porche.webp" alt="Porsche 911 Carrera"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal5" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">Porsche 911 Carrera</h5>
                     <p class="text-muted small">Clásico deportivo alemán, motor bóxer y manejo preciso.</p>
-                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$100.000.000 CLP</span></div>
+                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$100.000.000 CLP</span>
+                    </div>
                 </div>
             </div>
             <!-- Auto 6 -->
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/NisanGT.avif" alt="Nissan GT-R" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/NisanGT.avif" alt="Nissan GT-R"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal6" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">Nissan GT-R</h5>
                     <p class="text-muted small">Deportivo japonés, tracción total y aceleración impresionante.</p>
-                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$115.000.000 CLP</span></div>
+                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$115.000.000 CLP</span>
+                    </div>
                 </div>
             </div>
             <!-- Auto 7 -->
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/Mercedes.webp" alt="Mercedes AMG GT" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/Mercedes.webp" alt="Mercedes AMG GT"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal7" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">Mercedes AMG GT</h5>
                     <p class="text-muted small">Gran turismo alemán, motor V8 biturbo y diseño agresivo.</p>
-                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$120.000.000 CLP</span></div>
+                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$120.000.000 CLP</span>
+                    </div>
                 </div>
             </div>
             <!-- Auto 8 -->
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/lambo.webp" alt="Lamborghini Huracán" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/lambo.webp" alt="Lamborghini Huracán"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal8" style="object-fit:cover; height:180px; width:100%;">
                         <span class="badge bg-success position-absolute top-0 end-0 m-2">Premium</span>
                     </div>
                     <h5 class="mt-3 fw-bold">Lamborghini Huracán</h5>
                     <p class="text-muted small">Superdeportivo italiano, motor V10 y diseño espectacular.</p>
-                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$210.000.000 CLP</span></div>
+                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$210.000.000 CLP</span>
+                    </div>
                 </div>
             </div>
             <!-- Auto 9 -->
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/ferrari.jpg" alt="Ferrari 488 GTB" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/ferrari.jpg" alt="Ferrari 488 GTB"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal9" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">Ferrari 488 GTB</h5>
                     <p class="text-muted small">Deportivo italiano, motor V8 turbo y gran desempeño.</p>
-                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$250.000.000 CLP</span></div>
+                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$250.000.000 CLP</span>
+                    </div>
                 </div>
             </div>
             <!-- Auto 10 -->
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/toyotasupra.avif" alt="Toyota Supra GR" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/toyotasupra.avif" alt="Toyota Supra GR"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal10" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">Toyota Supra GR</h5>
@@ -177,7 +198,8 @@
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/Mazda MX-5.webp" alt="Mazda MX-5" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/Mazda MX-5.webp" alt="Mazda MX-5"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal11" style="object-fit:cover; height:180px; width:100%;">
                     </div>
                     <h5 class="mt-3 fw-bold">Mazda MX-5</h5>
@@ -189,27 +211,32 @@
             <div class="col-md-4 col-lg-3">
                 <div class="car-card p-3 h-100 shadow rounded bg-white">
                     <div class="position-relative">
-                        <img src="catalogo/tesla.jpeg" alt="Tesla Model S Plaid" class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
+                        <img src="catalogo/tesla.jpeg" alt="Tesla Model S Plaid"
+                            class="img-fluid car-img rounded cursor-pointer" data-bs-toggle="modal"
                             data-bs-target="#carModal12" style="object-fit:cover; height:180px; width:100%;">
                         <span class="badge bg-info text-dark position-absolute top-0 end-0 m-2">Eléctrico</span>
                     </div>
                     <h5 class="mt-3 fw-bold">Tesla Model S Plaid</h5>
                     <p class="text-muted small">Eléctrico de alto rendimiento y tecnología avanzada.</p>
-                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$130.000.000 CLP</span></div>
+                    <div class="oferta fw-semibold mb-2">Precio: <span class="text-success">$130.000.000 CLP</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
-    <!-- Modals for car details -->
-    <!-- Modals for car details -->
+
+    <!---------------------------------------------------- Modal de Autos ---------------------------------------------------->
     <!-- Modal 1 -->
     <div class="modal fade" id="carModal1" tabindex="-1" aria-labelledby="carModalLabel1" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel1"><i class="bi bi-car-front-fill me-2"></i>Ford Mustang GT</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel1"><i class="bi bi-car-front-fill me-2"></i>Ford Mustang GT
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -235,8 +262,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel2"><i class="bi bi-car-front-fill me-2"></i>Chevrolet Camaro SS</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel2"><i class="bi bi-car-front-fill me-2"></i>Chevrolet
+                        Camaro SS</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -262,8 +291,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel3"><i class="bi bi-car-front-fill me-2"></i>BMW M4 Competition</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel3"><i class="bi bi-car-front-fill me-2"></i>BMW M4
+                        Competition</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -289,8 +320,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel4"><i class="bi bi-car-front-fill me-2"></i>Audi R8 V10</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel4"><i class="bi bi-car-front-fill me-2"></i>Audi R8 V10
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -304,7 +337,8 @@
                                 <li class="list-group-item"><strong>0-100 km/h:</strong> 3.2 s</li>
                                 <li class="list-group-item"><strong>Tracción:</strong> Quattro</li>
                             </ul>
-                            <p class="mb-0 text-muted">Superdeportivo con motor V10, tracción quattro y diseño elegante.</p>
+                            <p class="mb-0 text-muted">Superdeportivo con motor V10, tracción quattro y diseño elegante.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -316,8 +350,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel5"><i class="bi bi-car-front-fill me-2"></i>Porsche 911 Carrera</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel5"><i class="bi bi-car-front-fill me-2"></i>Porsche 911
+                        Carrera</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -343,8 +379,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel6"><i class="bi bi-car-front-fill me-2"></i>Nissan GT-R</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel6"><i class="bi bi-car-front-fill me-2"></i>Nissan GT-R
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -358,7 +396,8 @@
                                 <li class="list-group-item"><strong>0-100 km/h:</strong> 2.9 s</li>
                                 <li class="list-group-item"><strong>Tracción:</strong> Total</li>
                             </ul>
-                            <p class="mb-0 text-muted">Deportivo japonés, tracción total y aceleración impresionante.</p>
+                            <p class="mb-0 text-muted">Deportivo japonés, tracción total y aceleración impresionante.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -370,8 +409,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel7"><i class="bi bi-car-front-fill me-2"></i>Mercedes AMG GT</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel7"><i class="bi bi-car-front-fill me-2"></i>Mercedes AMG GT
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -397,8 +438,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel8"><i class="bi bi-car-front-fill me-2"></i>Lamborghini Huracán</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel8"><i class="bi bi-car-front-fill me-2"></i>Lamborghini
+                        Huracán</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -424,8 +467,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel9"><i class="bi bi-car-front-fill me-2"></i>Ferrari 488 GTB</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel9"><i class="bi bi-car-front-fill me-2"></i>Ferrari 488 GTB
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -451,8 +496,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel10"><i class="bi bi-car-front-fill me-2"></i>Toyota Supra GR</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel10"><i class="bi bi-car-front-fill me-2"></i>Toyota Supra
+                        GR</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -478,8 +525,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel11"><i class="bi bi-car-front-fill me-2"></i>Mazda MX-5</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel11"><i class="bi bi-car-front-fill me-2"></i>Mazda MX-5
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -493,7 +542,8 @@
                                 <li class="list-group-item"><strong>0-100 km/h:</strong> 6.5 s</li>
                                 <li class="list-group-item"><strong>Transmisión:</strong> Manual/Automática</li>
                             </ul>
-                            <p class="mb-0 text-muted">Roadster ligero, tracción trasera y experiencia de manejo pura.</p>
+                            <p class="mb-0 text-muted">Roadster ligero, tracción trasera y experiencia de manejo pura.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -505,8 +555,10 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-dark text-white">
-                    <h5 class="modal-title" id="carModalLabel12"><i class="bi bi-car-front-fill me-2"></i>Tesla Model S Plaid</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title" id="carModalLabel12"><i class="bi bi-car-front-fill me-2"></i>Tesla Model S
+                        Plaid</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row align-items-center">
@@ -527,7 +579,10 @@
             </div>
         </div>
     </div>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
+
+    <!---------------------------------------------------- Footer ---------------------------------------------------->
     <footer class="bg-dark text-white pt-4 pb-3 mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -563,6 +618,9 @@
             </div>
         </div>
     </footer>
+    <!--------------------------------------------------------------------------------------------------------------------------->
+
+
 </body>
 
 
@@ -571,7 +629,7 @@
 
 
 <script>
-    // Car data for adding to cart
+    // Datos de los autos para agregar al carrito
     const cars = [
         { id: 1, name: "Ford Mustang GT", price: 35000000 },
         { id: 2, name: "Chevrolet Camaro SS", price: 40000000 },
@@ -587,7 +645,7 @@
         { id: 12, name: "Tesla Model S Plaid", price: 130000000 }
     ];
 
-    // Show a Bootstrap alert message
+    // Mostrar un mensaje de alerta de Bootstrap
     function showAlert(message, type = "warning") {
         const oldAlert = document.getElementById('custom-alert');
         if (oldAlert) oldAlert.remove();
@@ -608,13 +666,13 @@
         }, 2500);
     }
 
-    // Load cart from localStorage
+    // Cargar el carrito desde localStorage
     function loadCart() {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         document.getElementById('cart-count').textContent = cart.length;
     }
 
-    // Add to cart function (only one per product)
+    // Función para agregar al carrito (solo uno por producto)
     function addToCart(carId) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         const car = cars.find(c => c.id === carId);
@@ -629,10 +687,11 @@
         showAlert('Vehículo agregado al carrito exitosamente.', 'success');
     }
 
-    // Attach add to cart buttons after DOM loaded
+    // Inicializar el carrito al cargar la página
+    // Espera a que el DOM esté completamente cargado antes de ejecutar el script
     document.addEventListener('DOMContentLoaded', function () {
         loadCart();
-        // Add buttons to each car card
+        // Agregar botones a cada tarjeta de auto
         // Busca todos los .car-card y agrega el botón
         document.querySelectorAll('.car-card').forEach((card, i) => {
             const btn = document.createElement('button');

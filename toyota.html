@@ -4,17 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---------------------------------------------------- Bootstrap ---------------------------------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!---------------------------------------------------- Iconos ---------------------------------------------------->
     <link rel="stylesheet" href="toyota.css">
+    <!---------------------------------------------------- Animaciones ---------------------------------------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
     <title>Toyota Corolla - Detalles del Vehículo</title>
 
 
 </head>
 
 <body>
-    <!-- Navbar -->
+
+    <!---------------------------------------------------- Barra de Navegación ---------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
@@ -39,8 +42,9 @@
             </div>
         </div>
     </nav>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
-    <!-- Main Content -->
+    <!---------------------------------------------------- Detalles del Vehículo ---------------------------------------------------->
     <div class="container my-5">
         <div class="row align-items-center">
             <div class="col-md-6 text-center">
@@ -64,9 +68,9 @@
             </div>
         </div>
     </div>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
-
-    <!-- Footer -->
+    <!---------------------------------------------------- Pie de Página ---------------------------------------------------->
     <footer class="bg-dark text-white pt-4 pb-3 mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -100,23 +104,23 @@
             </div>
         </div>
     </footer>
-
-
-    <script>
-        // Imágenes de diferentes perfiles del auto
-        const images = [
-            'img/toyota.webp',
-            'img/toyota3.webp',
-            'img/toyota4.webp',
-            'img/toyota5.webp'
-        ];
-        let current = 0;
-        function changeImage() {
-            current = (current + 1) % images.length;
-            document.getElementById('carImage').src = images[current];
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 </body>
+
+<script>
+    // Imágenes de diferentes perfiles del auto
+    const images = [
+        'img/toyota.webp',
+        'img/toyota3.webp',
+        'img/toyota4.webp',
+        'img/toyota5.webp'
+    ];
+    let current = 0;
+    function changeImage() {
+        current = (current + 1) % images.length;
+        document.getElementById('carImage').src = images[current];
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

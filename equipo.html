@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia y Equipo - Tienda de Vehículos</title>
-    <!-- Bootstrap CSS -->
+   <!---------------------------------------------------- Bootstrap ---------------------------------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!---------------------------------------------------- Estilos ---------------------------------------------------->
     <link rel="stylesheet" href="css/equipo.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!---------------------------------------------------- Bootstrap Icons ---------------------------------------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!---------------------------------------------------- Font Awesome ---------------------------------------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+
+    <!---------------------------------------------------- Barra de Navegación ---------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
@@ -38,9 +42,10 @@
             </div>
         </div>
     </nav>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
+    <!---------------------------------------------------- Nuestra Historia ---------------------------------------------------->
     <div class="container mt-5">
-        <!-- Historia Mejorada -->
         <section>
             <h2 class="section-title">Nuestra Historia</h2>
             <div class="row align-items-center flex-column-reverse flex-md-row">
@@ -69,8 +74,9 @@
                 </div>
             </div>
         </section>
+        <!--------------------------------------------------------------------------------------------------------------------------->
 
-        <!-- Logros del equipo -->
+        <!---------------------------------------------------- Logros del Equipo ---------------------------------------------------->
         <section>
             <h2 class="section-title">Logros del Equipo</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
@@ -113,10 +119,9 @@
             </div>
         </section>
 
-        <!-- Equipo -->
+        <!---------------------------------------------------- Información del Equipo ---------------------------------------------------->
         <!-- Menú desplegable para información del equipo, misión, visión y valores -->
         <div class="accordion mb-4" id="equipoAccordion">
-            <!-- Nuestro Equipo -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingEquipo">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -271,7 +276,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Modals para presentaciones -->
+                        <!---------------------------------------------------- Modals para presentaciones ---------------------------------------------------->
                         <!-- Juan Pérez -->
                         <div class="modal fade" id="modalJuan" tabindex="-1" aria-labelledby="modalJuanLabel"
                             aria-hidden="true">
@@ -453,8 +458,10 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Misión y Visión -->
+            <!--------------------------------------------------------------------------------------------------------------------------->
+
+
+            <!---------------------------------------------------- Misión y Visión ---------------------------------------------------->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingMisionVision">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -496,8 +503,10 @@
                     </div>
                 </div>
             </div>
+            <!--------------------------------------------------------------------------------------------------------------------------->
 
-            <!-- Nuestros Valores -->
+
+            <!---------------------------------------------------- Nuestros Valores ---------------------------------------------------->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingValores">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -557,8 +566,10 @@
                     </div>
                 </div>
             </div>
+            <!--------------------------------------------------------------------------------------------------------------------------->
 
-            <!-- Trabaja con Nosotros -->
+            
+            <!---------------------------------------------------- Trabaja con Nosotros ---------------------------------------------------->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTrabaja">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -599,7 +610,9 @@
             </div>
         </div>
     </div>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
+    <!---------------------------------------------------- Footer ---------------------------------------------------->
     <footer class="bg-dark text-white pt-4 pb-3 mt-5">
         <div class="container">
             <div class="row align-items-center">
@@ -635,13 +648,14 @@
             </div>
         </div>
     </footer>
+    <!--------------------------------------------------------------------------------------------------------------------------->
 
 </body>
 
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
+<script>// Validación del formulario "Trabaja con Nosotros"
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('trabajaForm');
         const alertDiv = document.getElementById('trabajaAlert');

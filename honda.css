@@ -37,11 +37,13 @@ body {
   transition: background 0.3s, transform 0.2s;
 }
 
+/* Estilos de hover */
 .button-innovador:hover {
   background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
   transform: translateY(-3px) scale(1.04);
 }
 
+/* Estilos de las imágenes de autos */
 .car-img {
   max-width: 100%;
   height: auto;
@@ -50,6 +52,7 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Estilos de los detalles del auto */
 .car-details {
   background: #f8f9fa;
   border-radius: 0.5rem;
@@ -57,7 +60,7 @@ body {
   margin-top: 2rem;
 }
 
-
+/* Estilos del HTML y Body */
 html,
 body {
   height: 100%;
@@ -69,10 +72,12 @@ body {
   min-height: 100vh;
 }
 
+/* Estilos del Contenedor */
 .container.my-5 {
   flex: 1 0 auto;
 }
 
+/* Estilos del Footer */
 footer {
     background: rgba(0, 0, 0, 0.85);
     color: #fff;

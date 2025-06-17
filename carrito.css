@@ -1,10 +1,12 @@
-/* Estilos mejorados para el carrito */
+/* Estilos del carrito de compras */
 body {
   background: linear-gradient(135deg, #e0e7ff 0%, #f0fff4 100%);
   min-height: 100vh;
   margin: 0;
   padding: 0;
-}
+}   /* Estilos del fondo de la pagina */
+
+
 
 .carrito-container {
   max-width: 420px;
@@ -16,7 +18,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   position: relative;
   overflow: hidden;
-}
+} /* Estilos del contenedor del carrito */
 
 .carrito-container::before {
   content: "";
@@ -27,7 +29,7 @@ body {
   height: 160px;
   background: radial-gradient(circle, #90cdf4 0%, transparent 70%);
   z-index: 0;
-}
+}  /* Efecto decorativo de fondo */
 
 .carrito-titulo {
   font-size: 2.2rem;
@@ -38,7 +40,7 @@ body {
   letter-spacing: 1px;
   position: relative;
   z-index: 1;
-}
+}  /* Estilos del título del carrito */
 
 .carrito-lista {
   list-style: none;
@@ -46,7 +48,7 @@ body {
   margin: 0 0 28px 0;
   position: relative;
   z-index: 1;
-}
+}  /* Estilos de la lista de items del carrito */
 
 .carrito-item {
   display: flex;
@@ -55,21 +57,21 @@ body {
   padding: 14px 0;
   border-bottom: 1px solid #e2e8f0;
   transition: background 0.2s;
-}
+}  /* Estilos de cada item del carrito */
 
 .carrito-item:hover {
   background: #f7fafc;
-}
+}  /* Efecto hover en los items del carrito */
 
 .carrito-item:last-child {
   border-bottom: none;
-}
+}  /* Elimina el borde en el último item */
 
 .carrito-nombre {
   font-size: 1.13rem;
   color: #2d3748;
   flex: 1 1 auto;
-}
+}  /* Estilos del nombre del producto en el carrito */
 
 .carrito-precio {
   font-weight: bold;
@@ -77,7 +79,7 @@ body {
   margin-left: 16px;
   min-width: 70px;
   text-align: right;
-}
+}  /* Estilos del precio del producto en el carrito */
 
 .carrito-eliminar {
   background: linear-gradient(90deg, #e53e3e 60%, #f56565 100%);
@@ -90,12 +92,12 @@ body {
   margin-left: 16px;
   font-size: 1rem;
   box-shadow: 0 2px 8px rgba(229, 62, 62, 0.08);
-}
+}  /* Estilos del botón de eliminar producto */
 
 .carrito-eliminar:hover {
   background: linear-gradient(90deg, #c53030 60%, #e53e3e 100%);
   transform: scale(1.07);
-}
+}  /* Efecto hover en el botón de eliminar */
 
 .carrito-total {
   font-size: 1.25rem;
@@ -106,7 +108,7 @@ body {
   letter-spacing: 0.5px;
   position: relative;
   z-index: 1;
-}
+}  /* Estilos del total del carrito */
 
 .carrito-boton-comprar {
   display: block;
@@ -124,10 +126,10 @@ body {
   box-shadow: 0 4px 16px rgba(56, 161, 105, 0.10);
   position: relative;
   z-index: 1;
-}
+}  /* Estilos del botón de comprar */
 
 .carrito-boton-comprar:hover {
   background: linear-gradient(90deg, #2f855a 60%, #38a169 100%);
   box-shadow: 0 6px 24px rgba(56, 161, 105, 0.16);
   transform: scale(1.03);
-}
+}  /* Efecto hover en el botón de comprar */

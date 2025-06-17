@@ -1,3 +1,4 @@
+/* Estilos del carrito de compras */
 body {  
     
     background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 40%, #a6dce7 100%);
@@ -8,6 +9,7 @@ body {
     min-height: 100vh;
 }
 
+/* Estilos del header y footer */
 header, footer {
     background: rgba(34, 34, 59, 0.95);
     color: #fff;
@@ -17,12 +19,14 @@ header, footer {
     box-shadow: 0 2px 8px rgba(34,34,59,0.08);
 }
 
+/* Estilos del main */
 main {
     padding: 2rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Estilos de las tarjetas de auto */
 .card {
     background: #fff;
     border-radius: 18px;
@@ -32,10 +36,12 @@ main {
     margin-bottom: 2rem;
 }
 
+/* Estilos de los botones */
 .card:hover {
     box-shadow: 0 8px 32px rgba(34,34,59,0.18);
 }
 
+/* Estilos de los botones */
 .btn {
     background: linear-gradient(90deg, #a6dce7 0%, #c7c6db 100%);
     color: #fff;
@@ -53,6 +59,7 @@ main {
     transform: translateY(-2px) scale(1.04);
 }
 
+/* Estilos del scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     background: #e0e7ff;
@@ -63,6 +70,7 @@ main {
     border-radius: 8px;
 }
 
+/* Estilos de los enlaces */
 a {
     color: #4f8cff;
     text-decoration: none;
@@ -74,6 +82,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Estilos de las imágenes */
 .card-img-top {
     width: 100%;
     height: 220px;
@@ -91,11 +100,13 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
-
+/* Estilos del texto animado en el héroe */
 .hero-animate {
     animation: moveText 2s ease-in-out;
 }
 
+
+/* Animación para el texto del héroe */
 @keyframes moveText {
     0% {
         opacity: 0;
