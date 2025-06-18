@@ -1,15 +1,11 @@
 /* Estilos del carrito de compras */
 body {
-  background: linear-gradient(135deg, #e0e7ff 0%, #f0fff4 100%);
+  background: url('img/fondocord.avif') no-repeat center center fixed;
+  background-size: cover;
   min-height: 100vh;
   margin: 0;
   padding: 0;
 }   /* Estilos del fondo de la pagina */
-
-body {
-  background: url('img/fondocord.avif') no-repeat center center fixed;
-  background-size: cover;
-}
 
 .carrito-container {
   max-width: 420px;
@@ -136,3 +132,4 @@ body {
   box-shadow: 0 6px 24px rgba(56, 161, 105, 0.16);
   transform: scale(1.03);
 }  /* Efecto hover en el botón de comprar */
+
